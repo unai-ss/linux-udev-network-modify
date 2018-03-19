@@ -23,7 +23,7 @@ cat /sys/class/net/eth0/address
  
 ```
 
-Add the following line
+Add the following line to 70-persistent-net.rules
 ```
 SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="02:01:02:03:04:05", ATTR{dev_id}=="0x0", ATTR{type}=="1", NAME="eth0"
 ```
